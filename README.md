@@ -18,9 +18,9 @@ Use the attached folder structure to try your hand at implementing the index usi
 1. Outbound firewall rules
 1. Split horizon DNS/conditional DNS forwarder
 1. Tag all entities missing defaults (Default AWS / Cloud Configurations / Default Security Groups / Default Installed Apps)
-    1. Ensure that all entities created within a Cloud tenant have the following tag: `iac : <yourname>` 
+    1. Ensure that all entities created within a Cloud tenant have the following tag: `iac : <yourname>`
     2. Ensure that all entities within a specified vpc have the following Security Group created and attached
-        `` NAME: iac-sec-pol
+        ``` NAME: iac-sec-pol
            INBOUND: ALLOW: HTTP/80, SSH/22
            OUTBOUND: DENY: ANY/ANY
         ```
