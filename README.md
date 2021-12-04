@@ -22,7 +22,6 @@ Use the attached folder structure to try your hand at implementing the index usi
     2. Ensure that all entities within a specified vpc have the following Security Group created and attached
         ``` NAME: iac-sec-pol
            INBOUND: ALLOW: HTTP/80, SSH/22
-           OUTBOUND: DENY: ANY/ANY
         ```
     3. Ensure the following applications are installed on all instances running in a VPC:
         - git
