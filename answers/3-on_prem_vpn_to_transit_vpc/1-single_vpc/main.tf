@@ -9,10 +9,10 @@ module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
   name = var.exercise_name
-  cidr = "10.0.0.0/16"
+  cidr = var.cidr
 
-  azs             = ["ap-southeast-2a", "ap-southeast-2b", "ap-southeast-2c"]
-  private_subnets = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+  azs             = var.azs
+  private_subnets = var.private_subnets
 
 #  enable_nat_gateway = true
 #  enable_vpn_gateway = true
@@ -23,4 +23,10 @@ module "vpc" {
   }
 }
 
-# output
+output "new_vpc_id" {
+  value = module.vpc.vpc_id
+}
+
+output "new_subnet_ids" {
+  value = module.vpc.private_subnets
+}
