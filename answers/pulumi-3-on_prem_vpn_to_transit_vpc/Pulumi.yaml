@@ -1,0 +1,6 @@
+name: pulumi-3-on_prem_vpn_to_transit_vpc
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: IaC exercise 3 re-written in Pulumi
